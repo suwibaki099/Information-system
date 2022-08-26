@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box ;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
@@ -185,10 +184,10 @@
 }
 
 /* Change color of dropdown links on hover */
-.content a:hover {background-color: #2f98aa;}
+.content a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */
 .login:hover .content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.login:hover .dropbtn {background-color: #ddd;}
+.login:hover .dropbtn {background-color: #2f98aa;}
