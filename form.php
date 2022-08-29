@@ -1,5 +1,7 @@
-
-
+<?php
+include 'conn.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -178,8 +180,8 @@
                             <span class="btnText">Back</span>
                         </div>
                         
-                        <button class="sumbit">
-                            <span class="btnText" type = "submit" name = "submit">Analyze</span>
+                        <button class="submit" name = "submit">
+                            <span class="btnText" type = "submit" >Analyze</span>
                             <i class="uil uil-navigator"></i>
                         </button>
                     </div>
@@ -191,6 +193,7 @@
     <script src="formscript.js"></script>
 </body>
 </html>
+
 <?php 
 
 
@@ -218,30 +221,20 @@ if(isset($_POST['submit'])){
         $guardian_add = $_POST['guardian_add'];
         $contact = $_POST['contact'];
 
-       
-        $servername= "localhost";
-        $uname="root";
-        $pw="";
-        $dbname="hcenter"; 
 
-	            $conn=mysqli_connect($servername,$uname,$pw,$dbname);
-                if ($conn == false) {
-                die("Connection failed:" . mysqli_connect_error());
-                }
-            
-                
-                $sql= " INSERT INTO info (fname, lname, age, bday, gender, address, height, weight, shot, vit, meds, medhis, pfname, plname, civstatus, relate_child, guardian_add, contact) VALUES ('$fname', '$lname', '$age', '$bday', '$gender', '$address', '$height', '$weight', '$shot', '$vit', '$meds', '$medhis', '$pfname', '$plname', '$civstatus', '$relate_child', '$guardian_add', '$contact')";
-                   if (mysqli_query($conn, $sql)) {
-                    echo "<script> alert('Registered Successfully!') </script>";
-                } else {
-                    echo "error $sql. " . mysqli_error($conn);
-                }
-            
-                mysqli_close($conn);
+        $sql = "INSERT INTO `info`(`fname`, `lname`, `age`, `bday`, `gender`, `address`, `height`, `weight`, `shot`, `vit`, `meds`, `medhis`, `pfname`, `plname`, `civstatus`, `relate_child`, `guardian_add`, `contact`) VALUES ('$fname', '$lname', '$age', '$bday', '$gender', '$address', '$height', '$weight', '$shot', '$vit', '$meds', '$medhis', '$pfname', '$plname', '$civstatus', '$relate_child', '$guardian_add', '$contact')";
 
-            }
+        if ($conn->query($sql)=== true){
+            echo "<script> alert('Registered Successfully!') </script>";
+        }else {
+            echo "error: ".$sql."".mysqli_error($conn);
+        }
     
+        mysqli_close($conn);
 
-
-
+    }
+    
+            
+            
 ?>
+
