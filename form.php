@@ -10,12 +10,35 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="formstyle.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<style>
+    #imgbtn{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 7px;
+    top: 7px;
+    display: flex;
+    cursor: pointer;
+    }#imgbtn img:hover{
+        box-shadow: 0 0 0 10px #000000;
+    }
+</style>  
 
 </head>
 <body>
     <div class="container">
+        <script>
+            function yesno(){
+                let yesno = confirm ("Cancel registration ?");
+                if (yesno){
+                    alert ("Registration cancelled");
+                    window.location.href = "homepage.html"
+                }
+            }
+        </script>
+        <button onclick = "yesno()" ><img src="x.png" id="imgbtn"></button>
+       
         <header>Health Center</header>
-
         <form action="form.php" method = "POST">
             <div class="form first">
                 <div class="img">
