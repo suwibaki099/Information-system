@@ -92,6 +92,11 @@
   font-size: 12px;
 }
 
+.wrapper .bottom_nav ul li a:hover{
+  color: #37a000;
+  font-weight: bold;
+}
+
 .wrapper .banner img{
   width: 100%;
   height: 400px;
