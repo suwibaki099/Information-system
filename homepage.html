@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <link rel="stylesheet" href="css/hompage.css">
+        <link rel="stylesheet" href="css/modal.css">
         <title>Health Center</title>
         
     </head>
@@ -42,7 +43,27 @@
           </div>
           <a href="form.php" class="material-icon floating-btn"><img src="images/add.png"></a>
         </div>
-
-
+        <div class="design">
+          </br><img id="myImg" src="images/add-image.png" alt="your image" height=100 width=100>
+          <label>Name:<br>Age:<br>Address:</label><br>
+        <button id="modal-btn" class="button">Click Here</button>
+        </div>
+        <div id="my-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Children's Information</h2>
+            </div>
+            <div class="modal-body">
+              <p>Name:</p>
+              <p>Age</p>
+              <p>Birtday</p>
+            </div>
+            <div class="modal-footer">
+              <h3>Modal Footer</h3>
+            </div>
+          </div>
+          <script src="js/modal.js"></script>
+        </div>
     </body>
 </html>

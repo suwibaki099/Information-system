@@ -191,3 +191,12 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .login:hover .dropbtn {background-color: #2f98aa;}
+
+/*modal*/
+.design{
+  background-color: #94d9e6;
+  padding: 3em;
+  border-radius: 3ems;
+  width: 40%;
+  height: 10%;
+}
