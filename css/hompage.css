@@ -204,6 +204,22 @@
   cursor: pointer;
 }
 
+.design img {
+  float: left;
+  margin-right: 10px;
+}
+
 .design:hover {
   border: 1px solid;
+}
+
+.design label, address {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
 }
