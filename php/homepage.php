@@ -1,4 +1,6 @@
+
 <?php  
+
  $connect = mysqli_connect("localhost", "root", "", "hcenter");  
  $query = "SELECT * FROM info";  
  $result = mysqli_query($connect, $query);  
