@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8"/>
     <title>Login</title>
-    <link rel="stylesheet" href="css/style-login.css"/>
+    <link rel="stylesheet" href="../css/style-login.css"/>
 </head>
 <body>
+    
 <?php
     require('db.php');
     session_start();
