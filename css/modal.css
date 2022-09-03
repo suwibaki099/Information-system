@@ -1,6 +1,6 @@
 :root {
     --modal-duration: 1s;
-    --modal-color: #428bca;
+    --modal-color: #63abeb;
   }
   
  
@@ -89,6 +89,7 @@
   }
   h4 {
     margin: 10px 0 5px 0;
+    color: #444a50;
   }
 
   p {
