@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="formstyle.css">
+    <link rel="stylesheet" href="../css/formstyle.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <style>
     #imgbtn{
@@ -32,11 +32,11 @@ session_start();
                 let yesno = confirm ("Cancel registration ?");
                 if (yesno){
                     alert ("Registration cancelled");
-                    window.location.href = "homepage.html"
+                    window.location.href = "../php/homepage.php"
                 }
             }
         </script>
-        <button onclick = "yesno()" ><img src="x.png" id="imgbtn"></button>
+        <button onclick = "yesno()" ><img src="../images/x.png" id="imgbtn"></button>
        
         <header>Health Center</header>
         <form action="form.php" method = "POST">
@@ -63,8 +63,8 @@ session_start();
                     
                     </script>
                     
-                        <img id="myImg" src="add-image.png" alt="your image" height=100 width=100>
-                       <input type='file' />
+                        <img id="myImg" src="../images/add-image.png" alt="your image" name = "pic" height=100 width=100>
+                       <input type='file' name = "pic" required>
                     </div>
                 <div class="child-info">
                     <span class="title">Child's Information</span>
@@ -213,7 +213,7 @@ session_start();
         </form>
     </div>
 
-    <script src="formscript.js"></script>
+    <script src="../js/formscript.js"></script>
 </body>
 </html>
 
@@ -224,7 +224,7 @@ session_start();
 if(isset($_POST['submit'])){
 
 
- 
+        $pic = $_POST['pic'];
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $age = $_POST['age'];
@@ -245,7 +245,7 @@ if(isset($_POST['submit'])){
         $contact = $_POST['contact'];
 
 
-        $sql = "INSERT INTO `info`(`fname`, `lname`, `age`, `bday`, `gender`, `address`, `height`, `weight`, `shot`, `vit`, `meds`, `medhis`, `pfname`, `plname`, `civstatus`, `relate_child`, `guardian_add`, `contact`) VALUES ('$fname', '$lname', '$age', '$bday', '$gender', '$address', '$height', '$weight', '$shot', '$vit', '$meds', '$medhis', '$pfname', '$plname', '$civstatus', '$relate_child', '$guardian_add', '$contact')";
+        $sql = "INSERT INTO `info`(`pic`,`fname`, `lname`, `age`, `bday`, `gender`, `address`, `height`, `weight`, `shot`, `vit`, `meds`, `medhis`, `pfname`, `plname`, `civstatus`, `relate_child`, `guardian_add`, `contact`) VALUES ('$pic','$fname', '$lname', '$age', '$bday', '$gender', '$address', '$height', '$weight', '$shot', '$vit', '$meds', '$medhis', '$pfname', '$plname', '$civstatus', '$relate_child', '$guardian_add', '$contact')";
 
         if ($conn->query($sql)=== true){
             echo "<script> alert('Registered Successfully!') </script>";
@@ -260,4 +260,3 @@ if(isset($_POST['submit'])){
             
             
 ?>
-
