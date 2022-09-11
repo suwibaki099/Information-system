@@ -92,7 +92,13 @@
                 </div>  
                 <div class="modal-body" id="child_detail">  
                 
-                <div class="modal-footer">  
+                <div class="modal-footer"> 
+                <div class="btn">
+                <button type="button" class="btn1">New</button>
+                <button type="button" class="btn2">Update</button>
+                <button type="button" class="btn3">Delete</button>
+                <button type="button" class="btn4">Print</button>
+                </div> 
                 <h3>Modal Footer</h3>
                   
                 </div> 
