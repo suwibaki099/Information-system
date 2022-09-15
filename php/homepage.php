@@ -33,7 +33,7 @@
               </div> 
               <div class="right">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home.php">Home</a></li>
                     <div class="login">
                       <button class="dropbtn"><img src="../images/admin.png"></button>
                     <div class="content">
@@ -50,7 +50,7 @@
                 <li><a href="#">0-12 Months Old</a></li>
                 <li><a href="#">1-4 Years Old</a></li>
                 <li><a href="#">5-8 Years Old</a></li>
-                <li><a href="#">9-14 Years Old</a></li>
+                <li><a href="homepage.php">9-14 Years Old</a></li>
                 <li><a href="#">15-18 Years Old</a></li>
               </ul>
           </div>
