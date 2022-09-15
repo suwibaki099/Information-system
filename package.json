@@ -2,9 +2,9 @@
   "name": "information-system",
   "version": "1.0.0",
   "description": "1 sherwin\r 2 xin\r 3 \r 4 steffany\r 5. jandy erickk",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon js/index.js"
   },
   "repository": {
     "type": "git",
