@@ -12,7 +12,7 @@
            <table class="table table-bordered">';  
       while($row = mysqli_fetch_array($result))  
       {  
-        echo  "<div align=center><img  src='../images/".$row["pic"]."' height=160 width=150 ></div>" ;
+          echo  "<div align=center><img  src='../images/".$row["pic"]."' height=160 width=150 ></div>" ;
            
           $output .= ' 
          
@@ -67,7 +67,7 @@
                     <td  width="20%">'.$row["vit"].' </td>  
                 </tr> 
                 <tr>  
-                     <td  width="20%"><label>Medicine/label></td>  
+                     <td  width="20%"><label>Medicine</label></td>  
                     <td  width="20%">'.$row["meds"].' </td>  
                 </tr> 
                 <tr>  
