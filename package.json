@@ -1,0 +1,27 @@
+{
+  "name": "information-system",
+  "version": "1.0.0",
+  "description": "1 sherwin\r 2 xin\r 3 \r 4 steffany\r 5. jandy erickk",
+  "main": "js/index.js",
+  "scripts": {
+    "start": "nodemon js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suwibaki099/Information-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suwibaki099/Information-system/issues"
+  },
+  "homepage": "https://github.com/suwibaki099/Information-system#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "helmet": "^6.0.0",
+    "mongoose": "^6.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}
