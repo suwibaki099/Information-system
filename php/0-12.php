@@ -3,7 +3,7 @@
 /* This is a php code that is connecting to the database and selecting all the data from the table
 info. */
 $connect = mysqli_connect("localhost", "root", "", "hcenter");
-$query = "SELECT * FROM info";
+$query = "SELECT * from info where bday> now() - INTERVAL 12 month";
 $result = mysqli_query($connect, $query);
 ?>
 
@@ -37,7 +37,7 @@ $result = mysqli_query($connect, $query);
         </div>
         <div class="right">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="home.php">Home</a></li>
                 <div class="login">
                     <button class="dropbtn"><img src="../images/admin.png"></button>
                     <div class="content">
@@ -51,11 +51,11 @@ $result = mysqli_query($connect, $query);
     </div>
     <div class="bottom_nav">
         <ul>
-            <li><a href="#">0-12 Months Old</a></li>
-            <li><a href="#">1-4 Years Old</a></li>
-            <li><a href="#">5-8 Years Old</a></li>
-            <li><a href="#">9-14 Years Old</a></li>
-            <li><a href="#">15-18 Years Old</a></li>
+            <li><a href="0-12.php">0-12 Months Old</a></li>
+            <li><a href="1-4.php">1-4 Years Old</a></li>
+            <li><a href="5-8.php">5-8 Years Old</a></li>
+            <li><a href="9-14.php">9-14 Years Old</a></li>
+            <li><a href="15-18.php">15-18 Years Old</a></li>
         </ul>
     </div>
 
@@ -93,22 +93,25 @@ while ($row = mysqli_fetch_array($result)) {
             <h2>Children's Information</h2>
             <h4>Date: </h4>
         </div>
-        <div class="modal-body" id="child_detail">
-
-            <div class="modal-footer">
-                <div class="btn">
-                    <button type="button" class="btn1">New</button>
-                    <button type="button" class="btn2">Update</button>
-                    <button type="button" class="btn3">Delete</button>
-                    <button type="button" class="btn4">Print</button>
-                </div>
-                <h3>Modal Footer</h3>
-            </div>
-
+        
+          <div class="modal-body" id="child_detail">
+          
         </div>
+        <div class="modal-footer">
+      
+               <button type="button" class="btn1">New</button>
+               <button type="button" class="btn2">Update</button>
+               <button type="button" class="btn3">Delete</button>
+               <button type="button" class="btn4">Print</button>
+               </div>
+
     </div>
+      
 </div>
-</div>
+
+
+
+</html>
 
 <script>
     /* The above code is using ajax to call the select.php file and pass the child_id to the select.php

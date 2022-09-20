@@ -36,7 +36,7 @@ session_start();
             let yesno = confirm("Cancel registration ?");
             if (yesno) {
                 alert("Registration cancelled");
-                window.location.href = "../php/homepage.php"
+                window.location.href = "../php/home.php"
             }
         }
         </script>
@@ -209,7 +209,7 @@ session_start();
                         <span class="btnText">Back</span>
                     </div>
 
-                    <button class="submit" name="submit" formaction="https://formspree.io/f/mzbwebdg">
+                    <button class="submit" name="submit" action = "https://formspree.io/f/mzbwebdg"  >
                         <span class="btnText" type="submit">Analyze</span>
                         <i class="uil uil-navigator"></i>
                     </button>
