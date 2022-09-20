@@ -130,9 +130,7 @@ body {
             <div class="top_nav">
                 <div class="left">
                   <div class="logo"><p><span>Health</span>Center</p></div>
-                  <div class="search_bar">
-                      <input type="text" placeholder="Search">
-                  </div>
+                 
               </div> 
               <div class="right">
                 <ul>
@@ -145,16 +143,15 @@ body {
                     </div>
                     </div>
                   </ul>
-                
               </div>
             </div>
             <div class="bottom_nav">
               <ul>
-                <li><a href="#">0-12 Months Old</a></li>
-                <li><a href="#">1-4 Years Old</a></li>
-                <li><a href="#">5-8 Years Old</a></li>
-                <li><a href="homepage.php">9-14 Years Old</a></li>
-                <li><a href="">15-18 Years Old</a></li>
+              <li><a href="0-12.php">0-12 Months Old</a></li>
+              <li><a href="1-4.php">1-4 Years Old</a></li>
+              <li><a href="5-8.php">5-8 Years Old</a></li>
+              <li><a href="9-14.php">9-14 Years Old</a></li>
+              <li><a href="15-18.php">15-18 Years Old</a></li>
               </ul>
           </div>
           

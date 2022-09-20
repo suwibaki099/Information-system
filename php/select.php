@@ -8,6 +8,7 @@
       $result = mysqli_query($connect, $query);  
       $output .= '  
       
+    
       <div class="table-responsive">  
            <table class="table table-bordered">';  
       while($row = mysqli_fetch_array($result))  
@@ -99,8 +100,9 @@
                      <td width="20%"><label>Contact Number</label></td>  
                      <td width="20%">'.$row["contact"].' </td>  
                 </tr>  
-                </div>
-                </div>
+             
+                
+
                
                  
                 ';  
@@ -112,5 +114,9 @@
       echo $output;  
     
  }  
+
  
  ?>
+
+ 
+ 

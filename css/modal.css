@@ -1,114 +1,113 @@
 :root {
-    --modal-duration: 1s;
-    --modal-color: #63abeb;
-  }
+  --modal-duration: 1s;
+  --modal-color: #63abeb;
+}
+
+
+.button {
+  background: #428bca;
+  padding: 1em 2em;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #3876ac;
+}
+
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3% auto;
+  padding: 0 0 0 0;
+  width: 50%;
+  max-width: 600px;
+  border: 5px solid;
+  border-color: #0077b6;
+  padding: 10px 10px 5px 10px;
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.modal-footer {
   
+  padding: 10px;
+  color: #fff;
+  text-align: center;
   
-  .button {
-    background: #428bca;
-    padding: 1em 2em;
-    color: #fff;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
   }
-  
-  .button:hover {
-    background: #3876ac;
+  to {
+    opacity: 1;
   }
-  
-  
-  .modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 3% auto;
-    padding: 0 0 0 0;
-    width: 50%;
-    max-width: 600px;
-    border: 5px solid;
-    border-color: #0077b6;
-    padding: 10px 10px 5px 10px;
-  }
-  
-  .modal-header h2,
-  .modal-footer h3 {
-    margin: 0;
-  }
-  
-  .modal-header {
-    background: var(--modal-color);
-    padding: 15px;
-    color: #fff;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  
-  .modal-body {
-    padding: 10px 20px;
-    background: #fff;
-  }
-  
-  .modal-footer {
-    background: var(--modal-color);
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  
-  .close {
-    color: #ccc;
-    float: right;
-    font-size: 30px;
-    color: #fff;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  @keyframes modalopen {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  h4 {
-    margin: 10px 0 5px 0;
-    color: #444a50;
-  }
-  
-  p {
-    margin-top: 5px;
-  }
-  .btn{
-    padding: 2em;
-    padding-left: 15em;
-    padding-right: 10em;
-  }
-  .btn1, .btn2, .btn3, .btn4{
-    background-color: rgb(181, 235, 245);
-    border: none;
-    border-radius: 8px;
-    padding: 12px 28px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    opacity: 0.6;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .btn1:hover,
-  .btn2:hover,
-  .btn3:hover,
-  .btn4:hover {opacity: 1}
+}
+h4 {
+  margin: 10px 0 5px 0;
+  color: #444a50;
+}
+
+p {
+  margin-top: 5px;
+}
+.btn{
+  padding: 2em;
+  padding-left: 15em;
+  padding-right: 10em;
+}
+.btn1, .btn2, .btn3, .btn4{
+  background: var(--modal-color);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn1:hover,
+.btn2:hover,
+.btn3:hover,
+.btn4:hover {opacity: 9}
