@@ -35,8 +35,8 @@
 ?>
     <form class="form" method="post" name="login">
         <h1 class="login-title">Login</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true"/>
-        <input type="password" class="login-input" name="password" placeholder="Password"/>
+        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true" require/>
+        <input type="password" class="login-input" name="password" placeholder="Password" require/>
         <input type="submit" value="Login" name="submit" class="login-button"/>
         <p class="link"><a href="register.php">New Registration</a></p>
   </form>
