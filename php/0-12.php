@@ -99,7 +99,7 @@ while ($row = mysqli_fetch_array($result)) {
         </div>
         <div class="modal-footer">
       
-               <button type="button" class="btn1">New</button>
+               <button type="button" class="btn1" action="bmi.php">BMI</button>
                <button type="button" class="btn2">Update</button>
                <button type="button" class="btn3">Delete</button>
                <button type="button" class="btn4">Print</button>
