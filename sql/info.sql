@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 20, 2022 at 08:07 AM
+-- Generation Time: Sep 21, 2022 at 07:09 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `info` (
   `contact` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `info`
@@ -65,7 +65,12 @@ INSERT INTO `info` (`id`, `pic`, `fname`, `lname`, `age`, `bday`, `gender`, `add
 (8, 0x312e6a7067, 'Ruth', 'Cuasay', 2, '2020-01-10', 'Female', 'Brgy. Del Remedio San Pablo City, Laguna', 32, 16, 'Hepatitis B.', 'Vitamin A.', 'Amoxicillin', 'Sinus Infections', 'Steffany May', 'Lopera', 'Married', 'Mother', 'San Pablo City', 999556789),
 (9, 0x322e6a7067, 'Ruth', 'Cuasay', 16, '2006-11-11', 'Female', 'Brgy. Del Remedio San Pablo City, Laguna', 100, 30, 'Hepatitis B.', 'Vitamin A.', 'Amoxicillin', 'Sinus Infections', 'Ellaine Joy', 'Escano', 'Married', 'Mother', 'San Pablo City, Laguna', 999556789),
 (10, 0x312e6a7067, 'Steffany May', 'Lopera', 0, '2022-09-18', 'Female', 'San Pablo City', 157, 40, 'Hepatitis B.', 'Vitamin A.', 'Amoxicillin', 'Pet Allergy', 'Steffany May', 'Lopera', 'Divorced', 'Mother', 'San Pablo City', 999556789),
-(11, 0x322e6a7067, 'Ellaine Joy', 'Escano', 7, '2015-12-11', 'Female', 'San Pablo City, Laguna', 157, 40, 'Hepatitis B.', 'Vitamin C.', 'Amoxicillin', 'Sinus Infections', 'Ruth', 'Cuasay', 'Divorced', 'Mother', 'Brgy. Del Remedio San Pablo City, Laguna', 999556789);
+(11, 0x322e6a7067, 'Ellaine Joy', 'Escano', 7, '2015-12-11', 'Female', 'San Pablo City, Laguna', 157, 40, 'Hepatitis B.', 'Vitamin C.', 'Amoxicillin', 'Sinus Infections', 'Ruth', 'Cuasay', 'Divorced', 'Mother', 'Brgy. Del Remedio San Pablo City, Laguna', 999556789),
+(12, 0x322e6a7067, 'Leticia', 'Cuasay', 1, '2022-08-11', 'Female', 'Brgy. Del Remedio San Pablo City, Laguna', 25, 12, 'Hepatitis B.', 'Vitamin A.', 'Amoxicillin', 'Sinus Infections', 'Ellaine Joy', 'Escano', 'Divorced', 'Mother', 'San Pablo City, Laguna', 999556789),
+(13, 0x312e6a7067, 'Ellaine Joy', 'Escano', 4, '2022-05-12', 'Female', 'San Pablo City, Laguna', 30, 23, 'Hepatitis B.', 'Vitamin C.', 'Amoxicillin', 'Sinus Infections', 'Ruth', 'Cuasay', 'Married', 'Mother', 'Brgy. Del Remedio San Pablo City, Laguna', 999556789),
+(14, 0x312e6a7067, 'Sherwin', 'Pedro', 5, '2022-04-13', 'Male', 'Nagcarlan, Laguna', 32, 21, 'Hepatitis B.', 'Vitamin A.', 'Amoxicillin', 'Sinus Infections', 'Steffany May', 'Lopera', 'Divorced', 'Mother', 'San Pablo City, Laguna', 999556789),
+(15, 0x322e6a7067, 'Ellaine Joy', 'Escano', 6, '2022-03-14', 'Female', 'San Pablo City, Laguna', 36, 25, 'Hepatitis B.', 'Vitamin C.', 'Amoxicillin', 'Sinus Infections', 'Steffany May', 'Lopera', 'Married', 'Mother', 'San Pablo City', 999556789),
+(16, 0x312e6a7067, 'Ellaine Joy', 'Escano', 7, '2022-02-15', 'Female', 'San Pablo City, Laguna', 37, 32, 'Hepatitis B.', 'Vitamin A.', 'Amoxicillin', 'Pet Allergy', 'Steffany May', 'Lopera', 'Divorced', 'Mother', 'San Pablo City', 999556789);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
