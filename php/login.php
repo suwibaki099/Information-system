@@ -6,42 +6,60 @@
     <link rel="stylesheet" href="../css/style-login.css"/>
 </head>
 <body>
-    
 <?php
-    require('db.php');
-    session_start();
-    // When form submitted, check and create user session.
-    if (isset($_POST['username'])) {
-        $username = stripslashes($_REQUEST['username']);    // removes backslashes
-        $username = mysqli_real_escape_string($con, $username);
-        $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con, $password);
-        // Check user is exist in the database
-        $query    = "SELECT * FROM `chgusers` WHERE username='$username'
-                     AND password='$password'";
-        $result = mysqli_query($con, $query) or die(mysql_error());
-        $rows = mysqli_num_rows($result);
-        if ($rows == 1) {
-            $_SESSION['username'] = $username;
-            // Redirect to user dashboard page
-            header("location: dashboard.php");
-        } else {
-            echo "<div class='form'>
-                  <h3>Incorrect Username/password.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
-                  </div>";
-        }
-    } else {
-?>
-    <form class="form" method="post" name="login">
-        <h1 class="login-title">Login</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true" require/>
-        <input type="password" class="login-input" name="password" placeholder="Password" require/>
-        <input type="submit" value="Login" name="submit" class="login-button"/>
-        <p class="link"><a href="register.php">New Registration</a></p>
-  </form>
-<?php
+
+require 'password.php';
+if (isset($_POST["login"]))
+{
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // connect with database
+    $conn = mysqli_connect("localhost", "root", "", "admin");
+
+    // check if credentials are okay, and email is verified
+    $sql = "SELECT * FROM users WHERE email = '" . $email . "'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 0)
+    {
+        die("Email not found.");
     }
+
+    $user = mysqli_fetch_object($result);
+
+    if (!password_verify($password, $user->password))
+    {
+        echo
+        die (
+        "<div class='form'>
+        <h3>Incorrect Email/Password.</h3><br/>
+        <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
+                  </div>");
+
+    }
+
+    if ($user->email_verified_at == null)
+    {
+        die("Please verify your email <a href='email-verification.php?email=" . $email . "'>from here</a>");
+    }
+
+   
+    header("location: home.php");
+
+    exit();
+    
+}
+
+
+
 ?>
-</body>
-</html>
+
+<form class="form" method="post" name="login">
+    <h1 class="login-title">Login</h1>
+    <input type="email" class="login-input" name="email" placeholder="Enter email" autofocus="true" require/>
+    <input type="password" class="login-input" name="password" placeholder="Enter password" required />
+    <input type="submit" name="login" value="Login" class="login-button"/>
+    <p class="link"><a href="register.php">New Registration</a></p>
+</form>
+
