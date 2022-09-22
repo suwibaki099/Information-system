@@ -235,12 +235,14 @@
   display: table;
   clear: both;
 }
+
 label{
+  font-size: 15px;
   font-size: 20px;
 }
+
 .kid-photo{
   display: flex;
   align-items: center;
   margin: 10px 50px 10px 50px;
 }
-
