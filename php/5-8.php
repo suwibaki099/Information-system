@@ -68,7 +68,7 @@ $result = mysqli_query($connect, $query);
 /* Fetching the data from the database and displaying it in the table. */
 while ($row = mysqli_fetch_array($result)) {
 
-
+// edited
 ?>
         <div class="data-container">
         <div class="design clearfix  btn-xs view_data" id="<?php echo $row["id"]; ?>">
