@@ -19,7 +19,7 @@
          
                
                 <tr>  
-               
+                    
                      <td width="20%"><label>First Name</label></td>  
                      <td width="20%">'.$row["fname"].' </td>  
           

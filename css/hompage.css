@@ -228,3 +228,6 @@
   display: table;
   clear: both;
 }
+label{
+  font-size: 24px;
+}

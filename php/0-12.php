@@ -71,6 +71,7 @@ while ($row = mysqli_fetch_array($result)) {
 
 ?>
     <br>
+    
     <div class="design clearfix  btn-xs view_data" id="<?php echo $row["id"]; ?>">
 
         <?php echo "<img src='../images/" . $row["pic"] . "' alt='Image' height=105 width=110>"; ?>
