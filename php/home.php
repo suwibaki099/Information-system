@@ -15,6 +15,7 @@
 
 <script>
 
+/* This is the code for the calendar. */
 $(document).ready(function () {
     var calendar = $('#calendar').fullCalendar({
         editable: true,
@@ -90,6 +91,11 @@ $(document).ready(function () {
     });
 });
 
+/**
+ * When the user clicks the submit button, the form data is sent to a PHP file on the server, the PHP
+ * file sends the message to your email address, then the PHP file echos a success message back to the
+ * form, which is then displayed on the page and fades out.
+ */
 function displayMessage(message) {
 	    $(".response").html("<div class='success'>"+message+"</div>");
     setInterval(function() { $(".success").fadeOut(); }, 1000);
