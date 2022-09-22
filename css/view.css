@@ -1,0 +1,22 @@
+
+td {
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table{
+  width:100%;
+ }
+
+#table2{
+height: 20px;
+width: 100%;
+text-align: center;
+color: white;
+background-color: green;
+border:3px;
+margin:auto;
+}
+
+

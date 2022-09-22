@@ -33,6 +33,7 @@ $result = mysqli_query($connect, $query);
             </div>
             <div class="search_bar">
                 <input type="text" placeholder="Search">
+                
             </div>
         </div>
         <div class="right">
@@ -100,7 +101,7 @@ while ($row = mysqli_fetch_array($result)) {
         </div>
         <div class="modal-footer">
       
-        <a href=  "bmi.php"> <button type="button" class="btn1">BMI</button></a>
+               <a href="../php/BMI.php"> <button type="button" class="btn1">BMI</button></a>
                <button type="button" class="btn2">Update</button>
                <button type="button" class="btn3">Delete</button>
                <button type="button" class="btn4">Print</button>
@@ -136,3 +137,4 @@ file. */
         });
     });
 </script>
+
