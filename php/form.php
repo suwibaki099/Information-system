@@ -210,7 +210,7 @@ session_start();
                     </div>
 
                     <button class="submit" name="submit" action = "https://formspree.io/f/mzbwebdg"  >
-                        <span class="btnText" type="submit">Analyze</span>
+                        <span class="btnText" type="submit">Save</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                 </div>

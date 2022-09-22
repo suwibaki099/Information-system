@@ -101,19 +101,17 @@ while ($row = mysqli_fetch_array($result)) {
         </div>
         <div class="modal-body" id="child_detail">
 
-            <div class="modal-footer">
-                <div class="btn">
-                    <a href="../php/BMI.php"> <button type="button" class="btn1">BMI</button></a>
-                    <button type="button" class="btn2">Update</button>
-                    <button type="button" class="btn3">Delete</button>
-                    <button type="button" class="btn4">Print</button>
                 </div>
-                <h3>Modal Footer</h3>
-            </div>
+                <div class="modal-footer">
+      
+               <a href="../php/BMI.php"> <button type="button" class="btn1">BMI</button></a>
+               <button type="button" class="btn2">Update</button>
+               <button type="button" class="btn3">Delete</button>
+               <button type="button" class="btn4">Print</button>
+               </div>
 
-        </div>
     </div>
-</div>
+      
 </div>
 
 <script>
