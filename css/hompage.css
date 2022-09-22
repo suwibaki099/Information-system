@@ -204,11 +204,18 @@
   padding: 3em;
   margin-left: 5px;
   border-radius: 3ems;
-  width: 40%;
-  height: 10%;
+  width: 200px;
+  height: 400px;
   cursor: pointer;
-}
 
+}
+.data-container{
+  width: 16%;
+  height: 20%;
+  float: left;
+  padding: 10px 40px 10px 40px;
+  margin: 5px  20px 15px 20px;
+}
 .design img {
   float: left;
   margin-right: 10px;
@@ -228,6 +235,14 @@
   display: table;
   clear: both;
 }
+
 label{
   font-size: 15px;
+  font-size: 20px;
+}
+
+.kid-photo{
+  display: flex;
+  align-items: center;
+  margin: 10px 50px 10px 50px;
 }

@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style-login.css"/>
+</head>
+<body>
 <?php
 
 if (isset($_POST["verify_email"]))
@@ -35,9 +43,10 @@ if (isset($_POST["verify_email"]))
 
 ?>
 
-<form method="POST">
+<form method="POST" class="form">
+    <h1 class="login-title">Verification</h1>
     <input type="hidden" name="email" value="<?php echo $_GET['email']; ?>" required>
-    <input type="text" name="verification_code" placeholder="Enter verification code" required />
+    <input type="text" class="login-input" name="verification_code" placeholder="Enter verification code" required />
 
-    <input type="submit" name="verify_email" value="Verify Email">
+    <input type="submit" name="verify_email" value="Verify Email" class="login-button">
 </form>
