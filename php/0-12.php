@@ -61,7 +61,7 @@ $result = mysqli_query($connect, $query);
     </div>
 
 
-    <a href="form.php" class="material-icon floating-btn"><img src="../images/add.png"></a>
+    <a href="form.php" class="material-icon floating-btn"><img src="../images/add-user.png"></a>
 </div>
 
 
@@ -70,57 +70,60 @@ $result = mysqli_query($connect, $query);
 while ($row = mysqli_fetch_array($result)) {
 
 
-?>
-   
+    ?>
     <div class="data-container">
-        <div class="design clearfix  btn-xs view_data" id="<?php echo $row["id"]; ?>">
+      <div class="design clearfix  btn-xs view_data" id="<?php echo $row["id"]; ?>">
+      <div class="kid-photo">
+              <?php echo "<img src='../images/" . $row["pic"] . "' alt='Image' height=105 width=110>"; ?>
+          </div>
+         
+          <div class="kid-info">
+ 
+              <label style = "font-size:15px";><?php echo $row["fname"]; ?> <?php echo $row["lname"]; ?>
+              <label><?php echo $row["address"]; ?>
 
-            <div class="kid-photo">
-                <?php echo "<img src='../images/" . $row["pic"] . "' alt='Image' height=105 width=110>"; ?>
-            </div>
-            <br>
-            <div class="kid-info">
-                <label>Name: <?php echo $row["fname"]; ?> <?php echo $row["lname"]; ?> </label>
-                <label>Age: <?php echo $row["age"]; ?></label>
-                <label>Address: <?php echo $row["address"]; ?></label>
-            </div>
-    
-        </div>
+          </div>
+          
+          </div>
     </div>
-    
-<?php
-}
-?>
 
-</html>
-<div id="my-modal" class="modal">
-
-    <div class="modal-content">
+  
+  
+    <div id="my-modal" class="modal">
+        <div class="modal-content">
 
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h2>Children's Information</h2>
             <h4>Date: </h4>
         </div>
+
         
           <div class="modal-body" id="child_detail">
           
         </div>
+
         <div class="modal-footer">
       
-               <a href="../php/BMI.php"> <button type="button" class="btn1">BMI</button></a>
+               <a href="../php/BMI.php"><button type="button" class="btn1">BMI</button></a>
                <button type="button" class="btn2">Update</button>
                <button type="button" class="btn3">Delete</button>
                <button type="button" class="btn4">Print</button>
                </div>
 
-    </div>
-      
+    
+    
+  </div>
+  
+   
 </div>
 
+<?php
+}
 
+?>
 
 </html>
+
 
 <script>
     /* The above code is using ajax to call the select.php file and pass the child_id to the select.php
@@ -145,3 +148,4 @@ file. */
     });
 </script>
 
+</html>

@@ -33,10 +33,10 @@
       $sql = "INSERT INTO bmi_calculator (height, weight, score, date_now) VALUES ('$height', '$weight', '$total_bmi', NOW())" ;
       if (mysqli_query($db_conn, $sql)) {
       echo "";
-      } 
+      }
 
       if($total_bmi > 39.9){
-      echo '<center>Uhh! Your BMI Score is '.$total_bmi.' Which means You\'re in  <strong>Obesity</strong> class III.</center>';      
+      echo ' <center>Uhh! Your BMI Score is '.$total_bmi.' Which means You\'re in  <strong>Obesity</strong> class III.</center>';      
       }elseif($total_bmi >= 35){
       echo '<center>Uhh! Your BMI Score is '.$total_bmi.' Which means You\'re in  <strong>Obesity</strong> class II.</center>';      
       }elseif($total_bmi >= 30){

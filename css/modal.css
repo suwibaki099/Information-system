@@ -4,6 +4,8 @@
 }
 
 
+
+
 .button {
   background: #428bca;
   padding: 1em 2em;
@@ -19,14 +21,13 @@
 
 
 .modal-content {
-  position: relative;
+ 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 3% auto;
+  margin: 7% auto;
   padding: 0 0 0 0;
-  width: 50%;
-  max-width: 600px;
+  width: 2000%;
+  max-width: 1260px;
   border: 5px solid;
   border-color: #0077b6;
   padding: 10px 10px 5px 10px;
@@ -39,14 +40,14 @@
 
 .modal-header {
   background: var(--modal-color);
-  padding: 15px;
+  padding: 10px;
   color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .modal-body {
-  padding: 10px 20px;
+  padding: 9px 1px;
   background: #fff;
 }
 
@@ -55,7 +56,12 @@
   padding: 10px;
   color: #fff;
   text-align: center;
-  
+}
+
+.modal-footer a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .close {
@@ -111,4 +117,11 @@ p {
 .btn2:hover,
 .btn3:hover,
 .btn4:hover {opacity: 9}
+
+
+
+
+
+
+
 

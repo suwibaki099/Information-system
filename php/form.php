@@ -35,7 +35,6 @@ session_start();
         function yesno() {
             let yesno = confirm("Cancel registration ?");
             if (yesno) {
-                alert("Registration cancelled");
                 window.location.href = "../php/home.php"
             }
         }

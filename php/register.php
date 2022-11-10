@@ -88,16 +88,16 @@ if (isset($_POST["register"]))
   }
 }
 ?>
-
+<div class="container1">
 <form class="form" method="post">
-    <h1 class="login-title">Registration</h1>
+    <h1 class="login-title">Register</h1>
     <input type="text" class="login-input" name="name" placeholder="Enter name" required />
     <input type="email"  class="login-input" name="email" placeholder="Enter email" required />
     <input type="password"  class="login-input" name="password" placeholder="Enter password" required />
 
-    <input type="submit" name="register" value="Register" class="login-button">
-    <p class="link"><a href="login.php">Click to Login</a></p>
+    <input type="submit" name="register" value="Register" class="login-button">&nbsp;
+    <button type="submit" onclick= "document.location ='login.php'"  value="Sign in" class="login-button">Sign in</button>
 </form>
-
+</div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 
 if (isset($_POST["verify_email"]))
 {
-    $email = $_POST["email"];
+    $email = $_POST["email"];   
     $verification_code = $_POST["verification_code"];
 
     // connect with database

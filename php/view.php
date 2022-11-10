@@ -6,7 +6,23 @@
     <link rel="stylesheet" type="text/css" href="../css/view.css">
      
 </head>
+<script type="text/javascript">
+        function makeTableScroll() {
+            // Constant retrieved from server-side via JSP
+            var maxRows = 17;
 
+            var table = document.getElementById('myTable');
+            var wrapper = table.parentNode;
+            var rowsInTable = table.rows.length;
+            var height = 0;
+            if (rowsInTable > maxRows) {
+                for (var i = 0; i < maxRows; i++) {
+                    height += table.rows[i].clientHeight;
+                }
+                wrapper.style.height = height + "px";
+            }
+        }
+    </script>
 <?php
     $servername="localhost";
     $username="root";
@@ -23,7 +39,10 @@
     if(mysqli_num_rows($result)>0)
     {
     ?>
-    <table border="3" id="table">
+    <div class = "wrapper">
+    <body onload="makeTableScroll();">
+    <div class="scrollingTable">
+        <table id="myTable">
     <tr>
     <td><b>ID</b></td>
     <td><b>Height</b></td>

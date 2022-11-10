@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="../css/modal.css">
+<link rel="stylesheet" type="text/css" href="../css/table.css">
 <?php  
  if(isset($_POST["child_id"]))  
  {  
@@ -13,94 +14,49 @@
            <table class="table table-bordered">';  
       while($row = mysqli_fetch_array($result))  
       {  
-          echo  "<div align=center><img  src='../images/".$row["pic"]."' height=160 width=150 ></div>" ;
+          echo  "<div class='pic'><img  src='../images/".$row["pic"]."' height=132 width=135 ></div>" ;
            
           $output .= ' 
          
-               
-                <tr>  
-                    
-                     <td width="20%"><label>First Name</label></td>  
-                     <td width="20%">'.$row["fname"].' </td>  
-          
-          
-                </tr>  
+               <tr>
+               <td><b>Name of Child</b></td>
+               <td ><b>Age</b></td>
+               <td><b>Birthdate</b></td>
+               <td><b>Gender</b></td>
+               <td><b>Address</b></td>
+               <td><b>Height</b></td>
+               <td><b>Weight</b></td>
+               <td><b>Shot</b></td>
+               <td><b>Vitamins</b></td>
+               <td><b>Medicine</b></td>
+               <td><b>Medical History</b></td>
+               <td><b>Guardian-Name</b></td>
+               <td><b>Civil Status</b></td>
+               <td><b>Relationship</b></td>
+               <td><b>Guardian-Address</b></td>
+               <td><b>Contact</b></td>
+               </tr>
 
-               
-                <tr>  
-                     <td width="20%"><label>Last Name</label></td>  
-                     <td width="20%">'.$row["lname"].'</td>  
-                </tr>  
-             
-             
+               <tr>
+               <td >'.$row["fname"].' '.$row["lname"].'</td>
+               <td >'.$row["age"].'</td>
+               <td>'.$row["bday"].'</td>
+               <td>'.$row["gender"].'</td>
+               <td>'.$row["address"].'</td>
+               <td>'.$row["height"].'</td>
+               <td>'.$row["weight"].'</td>
+               <td>'.$row["shot"].'</td>
+               <td>'.$row["vit"].'</td>
+               <td>'.$row["meds"].'</td>
+               <td>'.$row["medhis"].'</td>
+               <td>'.$row["pfname"].' '.$row["plname"].'</td>
+               <td>'.$row["civstatus"].'</td>
+               <td>'.$row["relate_child"].'</td>
+               <td>'.$row["guardian_add"].'</td>
+               <td>'.$row["contact"].'</td>
+
+               </tr>
                 
-                <tr>  
-                     <td  width="20%"><label>Age</label></td>  
-                     <td  width="20%">'.$row["age"].'</td>  
-                </tr>  
-                  
-                <tr>  
-                     <td  width="20%"><label>Birth Date</label></td>  
-                     <td  width="20%">'.$row["bday"].' </td>  
-                </tr> 
-                <tr>  
-                     <td  width="20%"><label>Gender</label></td>  
-                     <td  width="20%">'.$row["gender"].' </td>  
-                </tr> 
-                <tr>  
-                    <td  width="20%"><label>Address</label></td>  
-                    <td  width="20%">'.$row["address"].' </td>  
-                </tr> 
-                <tr>  
-                    <td  width="20%"><label>Height</label></td>  
-                    <td  width="20%">'.$row["height"].' </td>  
-                </tr> 
-                <tr>  
-                    <td  width="20%"><label>Weight</label></td>  
-                    <td  width="20%">'.$row["weight"].' </td>  
-                </tr> 
-                <tr>  
-                     <td  width="20%"><label>Shots</label></td>  
-                     <td  width="20%">'.$row["shot"].' </td>  
-                </tr> 
-                <tr>  
-                    <td  width="20%"><label>Vitamins</label></td>  
-                    <td  width="20%">'.$row["vit"].' </td>  
-                </tr> 
-                <tr>  
-                     <td  width="20%"><label>Medicine</label></td>  
-                    <td  width="20%">'.$row["meds"].' </td>  
-                </tr> 
-                <tr>  
-                     <td  width="20%"><label>Medical History</label></td>  
-                     <td  width="20%">'.$row["medhis"].' </td>  
-                </tr> 
-                <tr>  
-                
-                     <td  width="20%"><label>Guardian - Firstname</label></td>  
-                     <td  width="20%">'.$row["pfname"].' </td>  
-                </tr> 
-                <tr>  
-                     <td width="20%"><label>Guardian - Lastname</label></td>  
-                     <td width="20%">'.$row["plname"].' </td>  
-                </tr> 
-                <tr>  
-                     <td width="20%"><label>Civil Status</label></td>  
-                     <td width="20%">'.$row["civstatus"].' </td>  
-                </tr>
-                <tr>  
-                     <td width="20%"><label>Relationship to the Child</label></td>  
-                     <td width="20%">'.$row["relate_child"].'</td>  
-                </tr> 
-                <tr>  
-                     <td width="20%"><label>Address</label></td>  
-                     <td width="20%">'.$row["guardian_add"].' </td>  
-                </tr> 
-                <tr>  
-                     <td width="20%"><label>Contact Number</label></td>  
-                     <td width="20%">'.$row["contact"].' </td>  
-                </tr>  
-             
                 
 
                

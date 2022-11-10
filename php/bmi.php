@@ -4,34 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/style-bmi.css">
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-     
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>   
 </head>
+
+<button class="back" onclick="history.back()">Back</button>
 <body>
 
-    <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Calculator</h3>
+    <h1><b>Body Mass Index Calculator</h1>
 <form class="form" action="" id="check_bmi">
     <div class="row-one">
-        <label for="height">Your Height:</label>
+        <label for="height">Height:</label>
 
-        <input type="text" class="text-input"  id="height" name="height" placeholder="cm">
-        <label for="weight">Your Weight:</label>
-        <input type="text" class="text-input" id="weight" name="weight" placeholder="kg">
+        <input type="text" class="text-input1"  id="height" name="height" placeholder="cm">
+        <label for="weight">Weight:</label>
+        <input type="text" class="text-input2" id="weight" name="weight" placeholder="kg">
     </div>
 
     <div id="response-displayer"></div><br>
-        <input type="submit" name="button" id="button" value="Check BMI";>
+        <input type="submit" name="button" id="button" value="Calculate">
         <button onclick="ClearFields();">Clear</button>
 </form>
 
-    <div id="res">
-        <div class="banner">
-             <img src="../images/bmi_1.jpg" alt="banner_img">
-        </div>
-    </div>
-
+    <h2><b>Body Mass Index Table</h2>
 </body>
 </html>
 
@@ -67,9 +64,12 @@
 
 document.getElementById("height").value = "";
 document.getElementById("weight").value = "";
+window.location.reload();
 }</script>
 
-<?php require "../php/view.php" ?>;
+<?php require "../php/view.php" ?><br>
+
+
 
 
 
