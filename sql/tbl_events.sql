@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `tbl_events` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
---
+--  
 -- Dumping data for table `tbl_events`
 --
 

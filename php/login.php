@@ -5,7 +5,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/style-login.css"/>
 </head>
-<body>
+<body >
 <?php
 
 require 'password.php';
@@ -54,12 +54,14 @@ if (isset($_POST["login"]))
 
 
 ?>
-
+<div class="container">
 <form class="form" method="post" name="login">
-    <h1 class="login-title">Login</h1>
+    <h1 class="login-title">Sign in</h1>
     <input type="email" class="login-input" name="email" placeholder="Enter email" autofocus="true" require/>
     <input type="password" class="login-input" name="password" placeholder="Enter password" required />
-    <input type="submit" name="login" value="Login" class="login-button"/>
-    <p class="link"><a href="register.php">New Registration</a></p>
+    <input type="submit" name="login" value="Sign in" class="login-button"/>&nbsp;
+    <button type="submit" onclick= "document.location ='register.php'"  value="Register" class="login-button">Register</button>
+
 </form>
+</div>
 

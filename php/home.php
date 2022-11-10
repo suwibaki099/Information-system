@@ -2,15 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-<link rel="stylesheet" href="../fullcalendar/fullcalendar.min.css" />
+
+<link rel="stylesheet" href="../css/fullcalendar.min.css" />
 <script src="../fullcalendar/lib/jquery.min.js"></script>
 <script src="../fullcalendar/lib/moment.min.js"></script>
 <script src="../fullcalendar/fullcalendar.min.js"></script>
-<link rel="stylesheet" href="../css/modal.css">
 <link rel="stylesheet" href="../css/hompage.css">    
 
 <script>
@@ -19,7 +15,7 @@
 $(document).ready(function () {
     var calendar = $('#calendar').fullCalendar({
         editable: true,
-        events: "../php/fetch-event.php",
+        events: "fetch-event.php",
         displayEventTime: false,
         eventRender: function (event, element, view) {
             if (event.allDay === 'true') {
@@ -38,7 +34,7 @@ $(document).ready(function () {
                 var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
 
                 $.ajax({
-                    url: '../php/add-event.php',
+                    url: 'add-event.php',
                     data: 'title=' + title + '&start=' + start + '&end=' + end,
                     type: "POST",
                     success: function (data) {
@@ -63,7 +59,7 @@ $(document).ready(function () {
                     var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
                     var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
                     $.ajax({
-                        url: '../php/edit-event.php',
+                        url: 'edit-event.php',
                         data: 'title=' + event.title + '&start=' + start + '&end=' + end + '&id=' + event.id,
                         type: "POST",
                         success: function (response) {
@@ -76,7 +72,7 @@ $(document).ready(function () {
             if (deleteMsg) {
                 $.ajax({
                     type: "POST",
-                    url: "../php/delete-event.php",
+                    url: "delete-event.php",
                     data: "&id=" + event.id,
                     success: function (response) {
                         if(parseInt(response) > 0) {

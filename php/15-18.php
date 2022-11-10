@@ -60,7 +60,7 @@ $result = mysqli_query($connect, $query);
     </div>
 
 
-    <a href="form.php" class="material-icon floating-btn"><img src="../images/add.png"></a>
+    <a href="form.php" class="material-icon floating-btn"><img src="../images/add-user.png"></a>
 </div>
 
 
@@ -72,16 +72,18 @@ while ($row = mysqli_fetch_array($result)) {
 ?>
       <div class="data-container">
         <div class="design clearfix  btn-xs view_data" id="<?php echo $row["id"]; ?>">
-
-            <div class="kid-photo">
+        <div class="kid-photo">
                 <?php echo "<img src='../images/" . $row["pic"] . "' alt='Image' height=105 width=110>"; ?>
             </div>
-            <br>
+           
             <div class="kid-info">
-                <label>Name: <?php echo $row["fname"]; ?> <?php echo $row["lname"]; ?> </label>
-                <label>Age: <?php echo $row["age"]; ?></label>
-                <label>Address: <?php echo $row["address"]; ?></label>
+   
+                <label style = "font-size:15px";><?php echo $row["fname"]; ?> <?php echo $row["lname"]; ?>
+                <label><?php echo $row["address"]; ?>
+
             </div>
+            
+            
     
         </div>
     </div>

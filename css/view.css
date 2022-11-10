@@ -1,22 +1,25 @@
-
-td {
-  height: 20px;
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+* {
+  font-size: 16px;
+  color: #333;
+  
+}
+table {
+  width:  100%;
+  border-collapse: collapse;
   text-align: center;
-  vertical-align: middle;
+  
+}
+td {
+  border: 1px solid black;
+}
+.scrollingTable {
+  width: 52em;
+  overflow-y: auto;
 }
 
-table{
-  width:100%;
- }
-
-#table2{
-height: 20px;
-width: 100%;
-text-align: center;
-color: white;
-background-color: green;
-border:3px;
-margin:auto;
+.wrapper {
+position: absolute;
+margin-top: 109px;
+margin-left: 470px;
 }
-
-
